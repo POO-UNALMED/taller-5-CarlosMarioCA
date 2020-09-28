@@ -54,6 +54,6 @@ public class Animal {
         else{
             message = "Mi nombre es " + nombre + " tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero + ", la zona en la que me ubico es " + zona + ", en el " + zona.zoo.nombre; 
         }
-        return "Soy un Animal";
+        return message;
     }
 }

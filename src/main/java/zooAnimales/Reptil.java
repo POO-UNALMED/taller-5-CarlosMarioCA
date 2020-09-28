@@ -10,8 +10,8 @@ import static zooAnimales.Mamifero.listado;
 public class Reptil extends Animal {
 
     static Reptil[] listado;
-    int iguanas;
-    int serpientes;
+    public static int iguanas;
+    public static int serpientes;
     String colorEscamas;
     int largoCola;
 

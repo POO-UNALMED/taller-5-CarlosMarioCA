@@ -8,8 +8,8 @@ import gestion.Zona;
  */
 public class Mamifero extends Animal {
     static Mamifero[] listado;
-    int caballos;
-    int leones;
+    public static int caballos;
+    public static int leones;
     boolean pelaje;
     int patas;
 

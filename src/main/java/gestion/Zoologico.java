@@ -15,6 +15,10 @@ public class Zoologico {
         this.zonas = new Zona[100];
     }
     
+    public Zoologico(){
+        
+    }
+    
     public void agregarZonas(Zona zona){
         int indice = zonas.length;
         zonas[indice] = zona;

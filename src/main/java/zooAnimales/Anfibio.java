@@ -10,8 +10,8 @@ import static zooAnimales.Mamifero.listado;
 public class Anfibio extends Animal {
 
     static Anfibio[] listado;
-    int ranas;
-    int salamandras;
+    public static int ranas;
+    public static int salamandras;
     String colorPiel;
     boolean venenoso;
 

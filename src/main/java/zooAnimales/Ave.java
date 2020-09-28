@@ -10,8 +10,8 @@ import static zooAnimales.Mamifero.listado;
 public class Ave extends Animal {
 
     static Ave[] listado;
-    int halcones;
-    int aguilas;
+    public static int halcones;
+    public static int aguilas;
     String colorPlumas;
 
     public Ave(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
@@ -34,12 +34,12 @@ public class Ave extends Animal {
         return "volar";
     }
 
-    public void crearHalcon(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
+    public void crearHalcon(String nombre, int edad, String genero, Zona zona) {
         new Ave(nombre,edad,"montanas",genero,zona,"cafe glorioso");
         halcones++;
     }
 
-    public void crearAguilas(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
+    public void crearAguilas(String nombre, int edad, String genero, Zona zona) {
         new Ave(nombre,edad,"montanas",genero,zona,"blanco y amarillo");
         aguilas++;
     }

@@ -10,8 +10,8 @@ import static zooAnimales.Mamifero.listado;
 public class Pez extends Animal {
 
     static Pez[] listado;
-    int salmones;
-    int bacalaos;
+    public static int salmones;
+    public static int bacalaos;
     String colorEscamas;
     int cantidadAletas;
 

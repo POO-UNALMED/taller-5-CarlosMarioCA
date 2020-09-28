@@ -16,6 +16,10 @@ public class Zona{
         
     }
     
+    public Zona(){
+        
+    }
+    
     public void agregarAnimales(Animal animal){
         int indice = animales.length;
         animales[indice] = animal;
