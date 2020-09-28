@@ -29,13 +29,12 @@ public class Zoologico {
 
     public int cantidadTotalAnimales() {
         int conteo = 0;
-        Iterator<Zona> it = zonas.iterator();
-        while (it.hasNext()) {
-            conteo = conteo + it.cantidadAnimales();
+        for (int i = 0; i < zonas.size(); i++) {
+            int dato = zonas.get(i).cantidadAnimales();
+            conteo = conteo + dato;
         }
         return conteo;
     }
-    
 
     public String getNombre() {
         return nombre;
