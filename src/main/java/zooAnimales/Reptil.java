@@ -1,41 +1,49 @@
 package zooAnimales;
 
 import gestion.Zona;
+import static zooAnimales.Mamifero.listado;
 
 /**
  *
  * @author SAM
  */
-public class Reptil extends Animal{
-    Reptil[] listado;
+public class Reptil extends Animal {
+
+    static Reptil[] listado;
     int iguanas;
     int serpientes;
     String colorEscamas;
     int largoCola;
 
-    public Reptil(Reptil[] listado, int iguanas, int serpientes, String colorEscamas, int largoCola, int totalAnimales, String nombre, int edad, String habitat, String genero, Zona[] zona) {
-        super(totalAnimales, nombre, edad, habitat, genero, zona);
-        this.listado = listado;
-        this.iguanas = iguanas;
+    public Reptil() {
+
+    }
+
+    public Reptil(String nombre, int edad, String habitat, String genero, Zona zona,String colorEscamas, int largoCola) {
+        super(nombre, edad, habitat, genero, zona);
         this.serpientes = serpientes;
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
+        int largo = listado.length;
+        listado[largo] = this;
     }
-    
-    public int cantidadReptiles(){
+
+    public int cantidadReptiles() {
         return iguanas + serpientes;
     }
-    
+
     @Override
-    public void movimiento(){
-        
+    public String movimiento() {
+        return "reptar";
     }
-    
-    public void crearSalmon(){
-        
+
+    public void crearIguana(String nombre, int edad, String genero, Zona zona) {
+        new Reptil(nombre, edad, "humedal", genero, zona, "verde" , 3);
+        iguanas++;
     }
-    
-    public void crearBacalao(){
-        
+
+    public void crearSerpiente(String nombre, int edad, String genero, Zona zona) {
+        new Reptil(nombre, edad, "jungla", genero, zona, "blanco" , 1);
+        serpientes++;
     }
 }

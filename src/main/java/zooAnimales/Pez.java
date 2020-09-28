@@ -1,43 +1,49 @@
 package zooAnimales;
 
 import gestion.Zona;
+import static zooAnimales.Mamifero.listado;
 
 /**
  *
  * @author SAM
  */
-public class Pez extends Animal{
-    Pez[] listado;
+public class Pez extends Animal {
+
+    static Pez[] listado;
     int salmones;
     int bacalaos;
     String colorEscamas;
     int cantidadAletas;
 
-    public Pez(Pez[] listado, int salmones, int bacalaos, String colorEscamas, int cantidadAletas, int totalAnimales, String nombre, int edad, String habitat, String genero, Zona[] zona) {
-        super(totalAnimales, nombre, edad, habitat, genero, zona);
-        this.listado = listado;
-        this.salmones = salmones;
-        this.bacalaos = bacalaos;
+    public Pez(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int cantidadAletas) {
+        super(nombre, edad, habitat, genero, zona);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
+        int largo = listado.length;
+        listado[largo] = this;
     }
-    
-    public int cantidadPeces(){
+
+    public Pez() {
+
+    }
+
+    public int cantidadPeces() {
         return bacalaos + salmones;
     }
-    
-    @Override
-    public void movimiento(){
-        
-    }
-    
-    public void crearSalmon(){
-        
-    }
-    
-    public void crearBacalao(){
-        
-    }
-    
-}
 
+    @Override
+    public String movimiento() {
+        return "nadar";
+    }
+
+    public void crearSalmon(String nombre, int edad,String genero, Zona zona) {
+        new Pez(nombre, edad, "oceano", genero, zona, "rojo", 6);
+        salmones++;
+    }
+
+    public void crearBacalao(String nombre, int edad,String genero, Zona zona) {
+        new Pez(nombre, edad, "oceano", genero, zona, "gris", 6);
+        bacalaos++;
+    }
+
+}

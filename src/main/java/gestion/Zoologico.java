@@ -5,22 +5,27 @@ import zooAnimales.Animal;
  * @author marx1
  */
 public class Zoologico {
-    String nombre;
+    public String nombre;
     String ubicacion;
-    Zona[] zonas;
+    public Zona[] zonas;
     
     public Zoologico(String nombre,String ubicacion,Zona[] zonas){
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-        this.zonas = zonas;
+        this.zonas = new Zona[100];
     }
     
-    public void agregarZonas(){
-        
+    public void agregarZonas(Zona zona){
+        int indice = zonas.length;
+        zonas[indice] = zona;
     }
     
-    public void cantidadTotalAnimales(){
-        
+    public int cantidadTotalAnimales(){
+        int conteo = 0;
+        for(int i =0; i < zonas.length; i++){
+            conteo = conteo + zonas[i].cantidadAnimales();        
+        }
+        return conteo;
     }
     
     

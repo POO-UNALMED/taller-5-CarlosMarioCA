@@ -1,39 +1,46 @@
 package zooAnimales;
 
 import gestion.Zona;
+import static zooAnimales.Mamifero.listado;
 
 /**
  *
  * @author SAM
  */
 public class Ave extends Animal {
-    Ave[] listado;
+
+    static Ave[] listado;
     int halcones;
     int aguilas;
     String colorPlumas;
 
-    public Ave(Ave[] listado, int halcones, int aguilas, String colorPlumas, int totalAnimales, String nombre, int edad, String habitat, String genero, Zona[] zona) {
-        super(totalAnimales, nombre, edad, habitat, genero, zona);
-        this.listado = listado;
-        this.halcones = halcones;
-        this.aguilas = aguilas;
+    public Ave(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
+        super(nombre, edad, habitat, genero, zona);
         this.colorPlumas = colorPlumas;
+        int largo = listado.length;
+        listado[largo] = this;
     }
-    
-    public int cantidadAves(){
+
+    public Ave() {
+
+    }
+
+    public int cantidadAves() {
         return halcones + aguilas;
     }
-    
+
     @Override
-    public void movimiento(){
-        
+    public String movimiento() {
+        return "volar";
     }
-    
-    public void crearHalcon(){
-        
+
+    public void crearHalcon(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
+        new Ave(nombre,edad,"montanas",genero,zona,"cafe glorioso");
+        halcones++;
     }
-    
-    public void crearAguilas(){
-        
+
+    public void crearAguilas(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
+        new Ave(nombre,edad,"montanas",genero,zona,"blanco y amarillo");
+        aguilas++;
     }
 }

@@ -6,21 +6,22 @@ import zooAnimales.Animal;
  */
 public class Zona{
     String nombre;
-    Zoologico[] zoo;
+    public Zoologico zoo;
     Animal[] animales;
     
-    public Zona(String nombre,Zoologico[] zoo, Animal[] animales){
+    public Zona(String nombre,Zoologico zoo, Animal[] animales){
         this.nombre = nombre;
         this.zoo = zoo;
         this.animales = animales;
         
     }
     
-    public void agregarAnimales(){
-        
+    public void agregarAnimales(Animal animal){
+        int indice = animales.length;
+        animales[indice] = animal;
     }
     
-    public void cantidadAnimales(){
-        
+    public int cantidadAnimales(){
+        return animales.length;
     }
 }
