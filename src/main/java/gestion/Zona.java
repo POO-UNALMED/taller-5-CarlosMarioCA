@@ -25,7 +25,7 @@ public class Zona {
         animales[animales.length] = animal;
     }
 
-    public int cantidadAnimales() {
+    public static int cantidadAnimales() {
         return animales.length;
     }
 
@@ -52,9 +52,4 @@ public class Zona {
     public void setAnimales(Animal[] animales) {
         this.animales = animales;
     }
-
-    public Zona get(int num) {
-        return zoo.getZona()[num];
-    }
-
 }
