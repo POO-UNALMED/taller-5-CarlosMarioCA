@@ -39,4 +39,87 @@ public class Mamifero extends Animal {
         new Mamifero(nombre, edad, "selva", genero, zona, true, 4);
         leones++;
     }
+
+    public static Mamifero[] getListado() {
+        return listado;
+    }
+
+    public static void setListado(Mamifero[] listado) {
+        Mamifero.listado = listado;
+    }
+
+    public static int getCaballos() {
+        return caballos;
+    }
+
+    public static void setCaballos(int caballos) {
+        Mamifero.caballos = caballos;
+    }
+
+    public static int getLeones() {
+        return leones;
+    }
+
+    public static void setLeones(int leones) {
+        Mamifero.leones = leones;
+    }
+
+    public boolean isPelaje() {
+        return pelaje;
+    }
+
+    public void setPelaje(boolean pelaje) {
+        this.pelaje = pelaje;
+    }
+
+    public int getPatas() {
+        return patas;
+    }
+
+    public void setPatas(int patas) {
+        this.patas = patas;
+    }
+
+    public static int getTotalAnimales() {
+        return totalAnimales;
+    }
+
+    public static void setTotalAnimales(int totalAnimales) {
+        Animal.totalAnimales = totalAnimales;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getHabitat() {
+        return habitat;
+    }
+
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Zona getZona() {
+        return zona;
+    }
+
+    public void setZona(Zona zona) {
+        this.zona = zona;
+    }
+    
+    
+    
 }

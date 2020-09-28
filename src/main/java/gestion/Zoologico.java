@@ -6,7 +6,7 @@ import zooAnimales.Animal;
  */
 public class Zoologico {
     public String nombre;
-    String ubicacion;
+    private String ubicacion;
     public Zona[] zonas;
     
     public Zoologico(String nombre,String ubicacion,Zona[] zonas){
@@ -30,6 +30,30 @@ public class Zoologico {
             conteo = conteo + zonas[i].cantidadAnimales();        
         }
         return conteo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getUbicacion() {
+        return ubicacion;
+    }
+
+    public void setUbicacion(String ubicacion) {
+        this.ubicacion = ubicacion;
+    }
+
+    public Zona[] getZonas() {
+        return zonas;
+    }
+
+    public void setZonas(Zona[] zonas) {
+        this.zonas = zonas;
     }
     
     

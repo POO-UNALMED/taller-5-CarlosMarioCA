@@ -45,4 +45,86 @@ public class Anfibio extends Animal {
         new Anfibio(nombre,edad,"selva",genero,zona,"negro y amarillo",false);
         salamandras++;
     }
+
+    public static Anfibio[] getListado() {
+        return listado;
+    }
+
+    public static void setListado(Anfibio[] listado) {
+        Anfibio.listado = listado;
+    }
+
+    public static int getRanas() {
+        return ranas;
+    }
+
+    public static void setRanas(int ranas) {
+        Anfibio.ranas = ranas;
+    }
+
+    public static int getSalamandras() {
+        return salamandras;
+    }
+
+    public static void setSalamandras(int salamandras) {
+        Anfibio.salamandras = salamandras;
+    }
+
+    public String getColorPiel() {
+        return colorPiel;
+    }
+
+    public void setColorPiel(String colorPiel) {
+        this.colorPiel = colorPiel;
+    }
+
+    public boolean isVenenoso() {
+        return venenoso;
+    }
+
+    public void setVenenoso(boolean venenoso) {
+        this.venenoso = venenoso;
+    }
+
+    public static int getTotalAnimales() {
+        return totalAnimales;
+    }
+
+    public static void setTotalAnimales(int totalAnimales) {
+        Animal.totalAnimales = totalAnimales;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getHabitat() {
+        return habitat;
+    }
+
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Zona getZona() {
+        return zona;
+    }
+
+    public void setZona(Zona zona) {
+        this.zona = zona;
+    }
+    
+    
 }

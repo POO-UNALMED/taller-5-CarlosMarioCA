@@ -5,11 +5,11 @@ import gestion.Zona;
  * @author SAM
  */
 public class Animal {
-    static int totalAnimales;
-    String nombre;
+    public static int totalAnimales;
+    private String nombre;
     int edad;
-    String habitat;
-    String genero;
+    public String habitat;
+    public String genero;
     Zona zona;
 
     public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
@@ -52,8 +52,58 @@ public class Animal {
             message = "Mi nombre es " + nombre + " tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero;
         }
         else{
-            message = "Mi nombre es " + nombre + " tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero + ", la zona en la que me ubico es " + zona + ", en el " + zona.zoo.nombre; 
+            message = "Mi nombre es " + nombre + " tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero + ", la zona en la que me ubico es " + zona + ", en el " + zona.zoo.getNombre(); 
         }
         return message;
     }
+
+    public static int getTotalAnimales() {
+        return totalAnimales;
+    }
+
+    public static void setTotalAnimales(int totalAnimales) {
+        Animal.totalAnimales = totalAnimales;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getHabitat() {
+        return habitat;
+    }
+
+    public void setHabitat(String habitat) {
+        this.habitat = habitat;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public void setGenero(String genero) {
+        this.genero = genero;
+    }
+
+    public Zona getZona() {
+        return zona;
+    }
+
+    public void setZona(Zona zona) {
+        this.zona = zona;
+    }
+    
+    
 }

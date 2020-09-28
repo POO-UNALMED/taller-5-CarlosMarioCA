@@ -5,9 +5,9 @@ import zooAnimales.Animal;
  * @author SAM
  */
 public class Zona{
-    String nombre;
+    private String nombre;
     public Zoologico zoo;
-    Animal[] animales;
+    public Animal[] animales;
     
     public Zona(String nombre,Zoologico zoo, Animal[] animales){
         this.nombre = nombre;
@@ -28,4 +28,30 @@ public class Zona{
     public int cantidadAnimales(){
         return animales.length;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Zoologico getZoo() {
+        return zoo;
+    }
+
+    public void setZoo(Zoologico zoo) {
+        this.zoo = zoo;
+    }
+
+    public Animal[] getAnimales() {
+        return animales;
+    }
+
+    public void setAnimales(Animal[] animales) {
+        this.animales = animales;
+    }
+    
+    
 }
