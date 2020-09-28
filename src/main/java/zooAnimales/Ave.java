@@ -1,6 +1,7 @@
 package zooAnimales;
 
 import gestion.Zona;
+import java.util.ArrayList;
 import static zooAnimales.Mamifero.listado;
 
 /**
@@ -9,7 +10,7 @@ import static zooAnimales.Mamifero.listado;
  */
 public class Ave extends Animal {
 
-    static Ave[] listado;
+    static ArrayList<Animal> listado;
     public static int halcones;
     public static int aguilas;
     String colorPlumas;
@@ -17,8 +18,7 @@ public class Ave extends Animal {
     public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
         super(nombre, edad, habitat, genero);
         this.colorPlumas = colorPlumas;
-        int largo = listado.length;
-        listado[largo] = this;
+        listado.add(this);
     }
 
     public Ave() {
@@ -44,13 +44,6 @@ public class Ave extends Animal {
         return new Ave(nombre,edad,"montanas",genero,"blanco y amarillo");
     }
 
-    public static Ave[] getListado() {
-        return listado;
-    }
-
-    public static void setListado(Ave[] listado) {
-        Ave.listado = listado;
-    }
 
     public static int getHalcones() {
         return halcones;

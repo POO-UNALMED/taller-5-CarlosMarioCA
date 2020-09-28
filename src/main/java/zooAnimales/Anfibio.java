@@ -1,6 +1,7 @@
 package zooAnimales;
 
 import gestion.Zona;
+import java.util.ArrayList;
 import static zooAnimales.Mamifero.listado;
 
 /**
@@ -9,7 +10,7 @@ import static zooAnimales.Mamifero.listado;
  */
 public class Anfibio extends Animal {
 
-    static Anfibio[] listado;
+    static ArrayList<Animal> listado;
     public static int ranas;
     public static int salamandras;
     String colorPiel;
@@ -19,8 +20,7 @@ public class Anfibio extends Animal {
         super(nombre, edad, habitat, genero);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
-        int largo = listado.length;
-        listado[largo] = this;
+        listado.add(this);
     }
 
     public Anfibio() {
@@ -46,13 +46,6 @@ public class Anfibio extends Animal {
         return new Anfibio(nombre,edad,"selva",genero,"negro y amarillo",false);
     }
 
-    public static Anfibio[] getListado() {
-        return listado;
-    }
-
-    public static void setListado(Anfibio[] listado) {
-        Anfibio.listado = listado;
-    }
 
     public static int getRanas() {
         return ranas;

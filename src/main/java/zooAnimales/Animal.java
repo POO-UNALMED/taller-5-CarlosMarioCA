@@ -18,10 +18,11 @@ public class Animal {
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+        totalAnimales++;
     }
 
     public Animal() {
-        
+        totalAnimales++;
     }
     
     public String movimiento(){
@@ -29,11 +30,11 @@ public class Animal {
     }
     
     public static String totalPorTipo(){
-        int mamif = Mamifero.listado.length;
-        int reptil = Reptil.listado.length;
-        int ave = Ave.listado.length;
-        int anfib = Anfibio.listado.length;
-        int pez = Pez.listado.length;
+        int mamif = Mamifero.listado.size();
+        int reptil = Reptil.listado.size();
+        int ave = Ave.listado.size();
+        int anfib = Anfibio.listado.size();
+        int pez = Pez.listado.size();
         
         String message = "Mamiferos: " + mamif + "\n" +
                         "Aves: " + ave + "\n" + 

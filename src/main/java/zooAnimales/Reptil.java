@@ -1,6 +1,7 @@
 package zooAnimales;
 
 import gestion.Zona;
+import java.util.ArrayList;
 import static zooAnimales.Mamifero.listado;
 
 /**
@@ -9,7 +10,7 @@ import static zooAnimales.Mamifero.listado;
  */
 public class Reptil extends Animal {
 
-    static Reptil[] listado;
+    static ArrayList<Animal> listado;
     public static int iguanas;
     public static int serpientes;
     String colorEscamas;
@@ -24,8 +25,7 @@ public class Reptil extends Animal {
         this.serpientes = serpientes;
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
-        int largo = listado.length;
-        listado[largo] = this;
+        listado.add(this);
     }
 
     public int cantidadReptiles() {
@@ -47,13 +47,7 @@ public class Reptil extends Animal {
         return new Reptil(nombre, edad, "jungla", genero, "blanco" , 1);
     }
 
-    public static Reptil[] getListado() {
-        return listado;
-    }
 
-    public static void setListado(Reptil[] listado) {
-        Reptil.listado = listado;
-    }
 
     public static int getIguanas() {
         return iguanas;

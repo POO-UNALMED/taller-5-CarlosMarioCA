@@ -1,13 +1,14 @@
 package zooAnimales;
 
 import gestion.Zona;
+import java.util.*;
 
 /**
  *
  * @author SAM
  */
 public class Mamifero extends Animal {
-    static Mamifero[] listado;
+    static ArrayList<Animal> listado;
     public static int caballos;
     public static int leones;
     boolean pelaje;
@@ -18,12 +19,10 @@ public class Mamifero extends Animal {
         super(nombre, edad, habitat, genero);
         this.pelaje = pelaje;
         this.patas = patas;
-        int largo = listado.length;
-        listado[largo] = this;
+        listado.add(this);
     }
     
     public Mamifero(){
-        
     }
     
     public int cantidadMamiferos(){
@@ -41,13 +40,7 @@ public class Mamifero extends Animal {
         
     }
 
-    public static Mamifero[] getListado() {
-        return listado;
-    }
 
-    public static void setListado(Mamifero[] listado) {
-        Mamifero.listado = listado;
-    }
 
     public static int getCaballos() {
         return caballos;
