@@ -12,7 +12,7 @@ public class Zoologico {
 
     public String nombre;
     private String ubicacion;
-    public static ArrayList<Zona> zonas;
+    public ArrayList<Zona> zonas;
 
     public Zoologico(String nombre, String ubicacion) {
         this.nombre = nombre;
@@ -53,7 +53,7 @@ public class Zoologico {
         this.ubicacion = ubicacion;
     }
 
-    public ArrayList getZona() {
+    public ArrayList<Zona> getZona() {
         return zonas;
     }
 

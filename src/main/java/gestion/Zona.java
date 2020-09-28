@@ -12,7 +12,7 @@ public class Zona {
 
     private String nombre;
     public Zoologico zoo;
-    public static ArrayList<Animal> animales;
+    public ArrayList<Animal> animales;
 
     public Zona(String nombre, Zoologico zoo) {
         this.nombre = nombre;
@@ -24,19 +24,18 @@ public class Zona {
 
     }
 
-    public static void agregarAnimales(Animal animal) {
+    public void agregarAnimales(Animal animal) {
         animales.add(animal);
     }
     
     
-    public static int cantidadAnimales() {
+    public int cantidadAnimales() {
         if (animales.isEmpty()) {
             return 0;
         } else {
-            return animales.size();
+            return (int)animales.size();
         }
     }
-    
 
 
     public String getNombre() {
