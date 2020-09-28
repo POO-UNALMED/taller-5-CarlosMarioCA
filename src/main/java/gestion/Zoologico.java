@@ -1,33 +1,36 @@
 package gestion;
+
 import zooAnimales.Animal;
+
 /**
  *
  * @author marx1
  */
 public class Zoologico {
+
     public String nombre;
     private String ubicacion;
     public Zona[] zonas;
-    
-    public Zoologico(String nombre,String ubicacion,Zona[] zonas){
+
+    public Zoologico(String nombre, String ubicacion) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
         this.zonas = new Zona[100];
     }
-    
-    public Zoologico(){
-        
+
+    public Zoologico() {
+
     }
-    
-    public void agregarZonas(Zona zona){
+
+    public void agregarZonas(Zona zona) {
         int indice = zonas.length;
         zonas[indice] = zona;
     }
-    
-    public int cantidadTotalAnimales(){
+
+    public int cantidadTotalAnimales() {
         int conteo = 0;
-        for(int i =0; i < zonas.length; i++){
-            conteo = conteo + zonas[i].cantidadAnimales();        
+        for (int i = 0; i < zonas.length; i++) {
+            conteo = conteo + zonas[i].cantidadAnimales();
         }
         return conteo;
     }
@@ -48,13 +51,16 @@ public class Zoologico {
         this.ubicacion = ubicacion;
     }
 
-    public Zona[] getZonas() {
+    public Zona[] getZona() {
         return zonas;
     }
 
-    public void setZonas(Zona[] zonas) {
+    public void setZona(Zona[] zonas) {
         this.zonas = zonas;
     }
-    
-    
+
+    public Zona get(int num){
+        return zonas[num];
+    }
+
 }

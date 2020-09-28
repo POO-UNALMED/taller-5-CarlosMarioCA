@@ -12,13 +12,12 @@ public class Animal {
     public String genero;
     Zona zona;
 
-    public Animal(String nombre, int edad, String habitat, String genero, Zona zona) {
+    public Animal(String nombre, int edad, String habitat, String genero) {
         this.totalAnimales = totalAnimales + 1;
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
-        this.zona = zona;
     }
 
     public Animal() {
@@ -29,7 +28,7 @@ public class Animal {
         return "desplazarse";
     }
     
-    public String totalPorTipo(){
+    public static String totalPorTipo(){
         int mamif = Mamifero.listado.length;
         int reptil = Reptil.listado.length;
         int ave = Ave.listado.length;
@@ -47,8 +46,9 @@ public class Animal {
     
     @Override
     public String toString(){
+        
         String message;
-        if(zona == null){
+        if(nombre == null){
             message = "Mi nombre es " + nombre + " tengo una edad de " + edad + ", habito en " + habitat + " y mi genero es " + genero;
         }
         else{
@@ -95,15 +95,5 @@ public class Animal {
 
     public void setGenero(String genero) {
         this.genero = genero;
-    }
-
-    public Zona getZona() {
-        return zona;
-    }
-
-    public void setZona(Zona zona) {
-        this.zona = zona;
-    }
-    
-    
+    }     
 }
