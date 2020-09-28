@@ -11,7 +11,7 @@ public class Zoologico {
 
     public String nombre;
     private String ubicacion;
-    ArrayList<Zona> zonas;
+    public ArrayList<Zona> zonas;
 
     public Zoologico(String nombre, String ubicacion) {
         this.nombre = nombre;
@@ -29,11 +29,13 @@ public class Zoologico {
 
     public int cantidadTotalAnimales() {
         int conteo = 0;
-        for (int i = 0; i < zonas.length; i++) {
-            conteo = conteo + zonas[i].cantidadAnimales();
+        Iterator<Zona> it = zonas.iterator();
+        while (it.hasNext()) {
+            conteo = conteo + it.cantidadAnimales();
         }
         return conteo;
     }
+    
 
     public String getNombre() {
         return nombre;
