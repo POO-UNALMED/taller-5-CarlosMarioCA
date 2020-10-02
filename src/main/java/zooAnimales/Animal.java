@@ -5,7 +5,7 @@ import gestion.Zona;
  * @author SAM
  */
 public class Animal {
-    public static int totalAnimales;
+    public static int totalAnimales = 0;
     private String nombre;
     int edad;
     public String habitat;
@@ -13,16 +13,15 @@ public class Animal {
     Zona zona;
 
     public Animal(String nombre, int edad, String habitat, String genero) {
-        this.totalAnimales = totalAnimales + 1;
         this.nombre = nombre;
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
-        totalAnimales++;
+        this.totalAnimales++;
     }
 
     public Animal() {
-        totalAnimales++;
+        this.totalAnimales++;
     }
     
     public String movimiento(){

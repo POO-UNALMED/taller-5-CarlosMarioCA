@@ -10,7 +10,7 @@ import static zooAnimales.Mamifero.listado;
  */
 public class Pez extends Animal {
 
-    static ArrayList<Animal> listado;
+    static ArrayList<Animal> listado = new ArrayList<>();;
     public static int salmones;
     public static int bacalaos;
     String colorEscamas;
@@ -20,8 +20,7 @@ public class Pez extends Animal {
         super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
-        this.listado = new ArrayList<Animal>();
-        listado.add(this);
+        this.listado.add(this);
     }
 
     public Pez() {

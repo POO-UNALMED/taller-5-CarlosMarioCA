@@ -11,7 +11,7 @@ import static zooAnimales.Mamifero.listado;
  */
 public class Reptil extends Animal {
 
-    static ArrayList<Animal> listado; 
+    static ArrayList<Animal> listado = new ArrayList<>();; 
     public static int iguanas;
     public static int serpientes;
     String colorEscamas;
@@ -26,8 +26,7 @@ public class Reptil extends Animal {
         this.serpientes = serpientes;
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
-        this.listado = new ArrayList<Animal>();
-        listado.add(this);
+        this.listado.add(this);
     }
 
     public int cantidadReptiles() {
