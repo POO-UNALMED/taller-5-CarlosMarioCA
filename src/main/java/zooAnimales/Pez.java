@@ -20,6 +20,7 @@ public class Pez extends Animal {
         super(nombre, edad, habitat, genero);
         this.colorEscamas = colorEscamas;
         this.cantidadAletas = cantidadAletas;
+        this.listado = new ArrayList<Animal>();
         listado.add(this);
     }
 

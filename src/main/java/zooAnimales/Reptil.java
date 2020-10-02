@@ -2,6 +2,7 @@ package zooAnimales;
 
 import gestion.Zona;
 import java.util.ArrayList;
+import static zooAnimales.Anfibio.listado;
 import static zooAnimales.Mamifero.listado;
 
 /**
@@ -10,7 +11,7 @@ import static zooAnimales.Mamifero.listado;
  */
 public class Reptil extends Animal {
 
-    static ArrayList<Animal> listado;
+    static ArrayList<Animal> listado; 
     public static int iguanas;
     public static int serpientes;
     String colorEscamas;
@@ -25,6 +26,7 @@ public class Reptil extends Animal {
         this.serpientes = serpientes;
         this.colorEscamas = colorEscamas;
         this.largoCola = largoCola;
+        this.listado = new ArrayList<Animal>();
         listado.add(this);
     }
 

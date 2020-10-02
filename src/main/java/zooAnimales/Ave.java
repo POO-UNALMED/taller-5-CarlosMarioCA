@@ -2,6 +2,7 @@ package zooAnimales;
 
 import gestion.Zona;
 import java.util.ArrayList;
+import static zooAnimales.Anfibio.listado;
 import static zooAnimales.Mamifero.listado;
 
 /**
@@ -18,6 +19,7 @@ public class Ave extends Animal {
     public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
         super(nombre, edad, habitat, genero);
         this.colorPlumas = colorPlumas;
+        this.listado = new ArrayList<Animal>();
         listado.add(this);
     }
 

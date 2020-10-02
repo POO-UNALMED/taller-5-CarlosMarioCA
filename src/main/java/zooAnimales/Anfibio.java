@@ -2,7 +2,6 @@ package zooAnimales;
 
 import gestion.Zona;
 import java.util.ArrayList;
-import static zooAnimales.Mamifero.listado;
 
 /**
  *
@@ -20,6 +19,7 @@ public class Anfibio extends Animal {
         super(nombre, edad, habitat, genero);
         this.colorPiel = colorPiel;
         this.venenoso = venenoso;
+        this.listado = new ArrayList<Animal>();
         listado.add(this);
     }
 
