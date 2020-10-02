@@ -12,12 +12,11 @@ public class Zoologico {
 
     public String nombre;
     private String ubicacion;
-    public static ArrayList<Zona> zonas;
+    public static ArrayList<Zona> zonas = new ArrayList<>();
 
     public Zoologico(String nombre, String ubicacion) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
-        this.zonas = new ArrayList<Zona>();
     }
 
     public Zoologico() {

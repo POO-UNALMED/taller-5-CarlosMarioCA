@@ -12,12 +12,11 @@ public class Zona {
 
     private String nombre;
     public Zoologico zoo;
-    static ArrayList<Animal> animales;
+    static ArrayList<Animal> animales = new ArrayList<>();
 
     public Zona(String nombre, Zoologico zoo) {
         this.nombre = nombre;
         this.zoo = zoo;
-        this.animales = new ArrayList<>();
     }
 
     public Zona() {
